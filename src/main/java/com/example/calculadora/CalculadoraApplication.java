@@ -14,6 +14,12 @@ public class CalculadoraApplication {
 		SpringApplication.run(CalculadoraApplication.class, args);
 	}
 
+	@RequestMapping("")
+	public String iniciar(){
+		String resultado = "Hola mundo";
+		return resultado;
+	}
+
 	@RequestMapping("/calculadora/suma")
 	public int suma(@RequestParam ("numero1") int numero1, @RequestParam("numero2") int numero2){
 		//http://localhost:8080/calculadora/suma?numero1=4&numero2=5
